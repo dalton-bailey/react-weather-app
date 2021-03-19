@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.seven-day {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.daily-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  border: 1px solid black;
+  margin: 10px;
+}
