@@ -4,14 +4,17 @@ import './index.css';
 
 dotenv.config();
 
-function Daily() {
+function Daily(props) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [location, setLocation] = useState([]);
+  
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=40.3413941&lon=-111.71863&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+    //   `https://api.openweathermap.org/data/2.5/onecall?lat=${props.lat}&lon=${props.lon}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=40&lon=98&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+
     )
       .then((res) => res.json())
       .then(
@@ -27,8 +30,6 @@ function Daily() {
       );
   }, []);
 
-  let [month, date, year] = new Date().toLocaleDateString("en-US").split("/")  
-//   console.log(month, date, year)
 
 
 
@@ -38,7 +39,7 @@ function Daily() {
           return (
             <div key={day.dt} className="daily-forecast">
               <h1>Day</h1>
-              <h2>{ month + '/' + date + '/' + year }</h2>
+              <h2>Date</h2>
               <p>{day.weather[0].description}</p>
               <div className="temps">
               <p className="high">{Math.round(day.temp.max)}</p>

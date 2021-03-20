@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'
-import Daily from './Daily'
+// import Daily from './Daily'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Daily />
+    {/* <Daily /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
