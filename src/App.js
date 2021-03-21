@@ -97,7 +97,7 @@ function App() {
       <div className="current">
         <h2 className="currentLocation">Location: {currentWeather.name}</h2>
         <p className="currentTemp">
-          Current Temperature: {currentWeather.main.temp} &#176;{" "}
+          Current Temperature: {Math.round(currentWeather.main.temp)} &#176;{" "}
         </p>
       </div>
       <div>
