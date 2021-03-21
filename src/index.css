@@ -32,11 +32,16 @@ code {
 }
 
 
-.content {
+#root {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1000px;
 }
 
 form {
@@ -48,4 +53,9 @@ form {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.hourlyWeather {
+  display: flex;
+  justify-content: space-around;
 }

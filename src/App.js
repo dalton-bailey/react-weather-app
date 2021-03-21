@@ -41,7 +41,7 @@ function App() {
         (result) => {
           setIsLoaded(true);
           setDailyWeather(result.daily);
-          setHourlyWeather(result.hourly);
+          setHourlyWeather(result.hourly.splice(0,12));
           console.log(result);
         },
         (error) => {
@@ -101,15 +101,20 @@ function App() {
           Current Temperature: {currentWeather.main.temp} &#176;{" "}
         </p>
       </div>
+      <div>
+      <h2>12 Hour Forecast</h2>
       <div className="hourlyWeather">
         {hourlyWeather.map((hour) => {
           return (
             <div key={hour.dt}>
-              <p>{hour.temp}</p>
+              <p>{Math.round(hour.temp)}&#176;</p>
             </div>
           );
         })}
       </div>
+      </div>
+      <div>
+      <h2>7 Day Forecast</h2>
       <div className="seven-day">
         {dailyWeather.map((day) => {
           return (
@@ -127,6 +132,7 @@ function App() {
             </div>
           );
         })}
+        </div>
       </div>
     </div>
   );
