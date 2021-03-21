@@ -16,7 +16,7 @@ function App() {
   async function submit(e) {
     e.preventDefault();
       fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=${unit}&appid=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=${unit}&appid=669f8245a6857a3f843a044c9ce99772`
       // `https://api.openweathermap.org/data/2.5/weather?zip=84042,us&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => res.json())
@@ -33,7 +33,7 @@ function App() {
       )
       fetch(
       // `https://api.openweathermap.org/data/2.5/onecall?lat=${currentWeather.coord.lat}&lon=${currentWeather.coord.lon}&units=${unit}&appid=${process.env.REACT_APP_API_KEY}`
-      `https://api.openweathermap.org/data/2.5/onecall?lat=40.2607&lon=-111.6549&units=${unit}&appid=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=40.2607&lon=-111.6549&units=${unit}&appid=669f8245a6857a3f843a044c9ce99772`
     )
       .then((res) => res.json())
       .then(
